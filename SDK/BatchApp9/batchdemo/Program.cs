@@ -121,6 +121,15 @@ namespace batchdemo
                     virtualMachineConfiguration: virtualMachineConfiguration
                    );
 
+                cloudPool.ApplicationPackageReferences = new List<ApplicationPackageReference>
+                {
+                    new ApplicationPackageReference
+                    {
+                    ApplicationId = Packageid,
+                    Version = Packageversion
+                    }
+                };
+
                 cloudPool.Commit();
             }
 
